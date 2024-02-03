@@ -17,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={cn('min-h-screen bg-[#141414] text-white', inter.className)}
-      >
+      <body className={cn('flex flex-col min-h-screen', inter.className)}>
         {children}
       </body>
     </html>
