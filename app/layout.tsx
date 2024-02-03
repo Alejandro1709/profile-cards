@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
+import { ModeToggler } from '@/components/mode-toggler';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +20,17 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={cn('flex flex-col min-h-screen', inter.className)}>
-        {children}
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <nav className='flex justify-center items-center h-16 border-b'>
+            <ModeToggler />
+          </nav>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
