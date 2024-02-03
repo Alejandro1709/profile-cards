@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import { ModeToggler } from '@/components/mode-toggler';
+import Navbar from '@/components/navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,9 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <nav className='flex justify-center items-center h-16 border-b'>
-            <ModeToggler />
-          </nav>
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

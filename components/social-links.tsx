@@ -1,9 +1,10 @@
+import LinkCard from './link-card';
+import { Button } from './ui/button';
+
 function SocialLinks() {
   return (
     <ul className='flex flex-col gap-4 w-full mt-2'>
-      <li className='bg-slate-100 dark:bg-slate-800 p-4 text-center font-bold rounded dark:hover:bg-[#C5F829] hover:bg-[#C5F829] hover:text-[#333333] cursor-pointer transition-all'>
-        GitHub
-      </li>
+      <LinkCard />
       <li className='bg-slate-100 dark:bg-slate-800 p-4 text-center font-bold rounded dark:hover:bg-[#C5F829] hover:bg-[#C5F829] hover:text-[#333333] cursor-pointer transition-all'>
         Frontend Mentor
       </li>
