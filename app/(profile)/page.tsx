@@ -1,8 +1,8 @@
-import SocialCard from '@/components/social-card';
+import SocialCard from "@/components/social-card";
 
 export default function ProfilePage() {
   return (
-    <main className='flex justify-center items-center flex-1'>
+    <main className="flex justify-center items-center">
       <SocialCard />
     </main>
   );
